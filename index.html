@@ -34,7 +34,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         font-family: "Poppins", sans-serif;
         margin-bottom: 60px; 
         text-align: center;
-        margin-top: 50px;
+        margin-top: 80px;
         display: block;
         font-size: 1.5em;
         font-weight: bold;
@@ -99,7 +99,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         background-color: #FF9A00;
         text-decoration: none;
         margin: 10px auto 20px;
-        font-family: "Montserrat", Sans-serif;
+        font-family: "Poppins", sans-serif;
         font-size: 13px;
         font-weight: 600;
         text-transform: uppercase;
@@ -131,7 +131,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         padding: 20px 10px;
         border: 1px solid #00000026;
         margin: 10px;
-        font-family: sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: 25px;
         transition: ease-in-out .3s;
         text-align: center;
@@ -141,7 +141,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         padding: 20px 10px;
         border: 1px solid #00000026;
         margin: 10px;
-        font-family: sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: 25px;
         transition: ease-in-out .3s;
         text-align: center;
@@ -166,8 +166,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     .submit-btn
     {
+        height: 38px;
         display: inline-block;
-        padding: 10px 20px;
+        padding: 5px 10px;
         background-color: #FF9A00;
         text-decoration: none;
         font-family: "Poppins", sans-serif;
@@ -206,7 +207,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     }
     .text-center-para 
     {
-        font-family: sans-serif;
+        font-family: "Poppins", sans-serif;
         line-height: 25px;
         margin-bottom: 20px;
         text-align: center;
@@ -229,33 +230,44 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     {
         margin-bottom: 100px;
     }
-
+    #output
+    {
+        padding-top:20px ;
+    }
 
     @media (max-width: 767px) {
     .container-fluid .justify-content-center {
         gap: 20px;
-    } 
-}
-/* 
-.dark-mode {
-  background-color: black;
-  color: white;
-} */
+     } 
+    }
+
+    @media (max-width: 576px) {
+  .submit-btn {
+    width: 50%; 
+    font-size: 16px; 
+    padding: 10px; 
+     }
+     .centerd-coloum
+    {
+    text-align: center;
+    }
+    }
+
+    @media (max-width: 768px) {
+    .communication-tools {
+       
+     }
+    }
+
+
 </style>
 </head>
 <body>
 
         <header>
             <img src="./assets/images/trulogo-2.png">
-            <!-- <button onclick="myFunction()">Toggle dark mode</button> -->
             <h1>Tru Portal</h1>
         </header>
-
-        <script>
-            function myFunction() {
-               var element = document.body;
-               element.classList.toggle("dark-mode");
-            }
             </script>
         <div class="container-fluid">   
         <h2 class="center-text" style="margin-bottom: -20px;">Quick Links</h2>
@@ -357,7 +369,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
                     <input type="text" id="fileversion" name="fileversion" class="form-control" placeholder="File Version">
                 </div>
 
-                <div class="col-md-2 mb-3">
+                <div class="col-md-2 mb-3 centerd-coloum">
                     <button type="submit" class="submit-btn">Generate Path</button>
                 </div>
                 </div>
@@ -371,38 +383,32 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 
     </div>
 <script>
-    function openApp(appUrl, webUrl) {
-        window.location.href = appUrl;
-        setTimeout(function() {
-            window.location.href = webUrl;
-        }, 5000);
-    }
     document.getElementById('openSlack').addEventListener('click', function() {
-        openApp('slack://open', 'https://slack.com/');
+        openApp('https://slack.com/');
     });
 
     document.getElementById('openMondayBoard').addEventListener('click', function() {
-        openApp('monday://open', 'https://monday.com/');
+        openApp('https://monday.com/');
     });
 
     document.getElementById('microsoftOutLook').addEventListener('click', function() {
-        openApp('ms-outlook://', 'https://outlook.office.com/');
+        openApp('https://outlook.office.com/');
     });
 
     document.getElementById('truLMS').addEventListener('click', function() {
-        openApp('truLMS://open', '');
+        openApp('truLMS://open');
     });
     
     document.getElementById('payBook').addEventListener('click', function() {
-        openApp('paybooks://open', 'https://apps.paybooks.in/');
+        openApp('https://apps.paybooks.in/');
     });
 
     document.getElementById('chatGPT').addEventListener('click', function() {
-        openApp('chatGPT://open', 'https://chat.openai.com/');
+        openApp('https://chat.openai.com/');
     });
     
     document.getElementById('perplexity').addEventListener('click', function() {
-        openApp('perplexity://open', 'https://www.perplexity.ai/');
+        openApp('https://www.perplexity.ai/');
     });
 </script>
 
